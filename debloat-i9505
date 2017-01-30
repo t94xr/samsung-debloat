@@ -1,0 +1,59 @@
+#/sbin/busybox
+#
+# Samsung S4 (i9505) Samsung Stock Firmware De-bloat
+# 
+#
+echo "Mount /system"
+mount /system
+
+echo "Removing bloat in /system/app folder"
+
+rm -Rf /system/app/AllShare*
+
+rm -Rf /system/app/AntHalService
+rm -Rf /system/app/ANT*
+rm -Rf /system/app/Books
+rm -Rf /system/app/PolarisOffice5
+rm -Rf /system/app/WebManual
+rm -Rf /system/app/Newsstand
+rm -Rf /system/app/TripAdvisor
+
+# Samsung Hub is no longer operational.
+rm -Rf /system/app/SamsungHub
+rm -Rf /system/app/SamsungHubUpdater
+
+rm -Rf /system/app/SBrowser*
+rm -Rf /system/app/SpenSdk3
+rm -Rf /system/app/SPlanner*
+rm -Rf /system/app/ChatOn_MARKET
+rm -Rf /system/app/S_Translator_CSLi
+
+rm -Rf /system/app/SecEmail_K
+rm -Rf /system/app/SecKidsModeInstaller
+
+rm -Rf /system/app/AccuweatherPhone2013_J_LMR
+rm -Rf /system/app/Accuweather*
+rm -Rf /system/app/Flipboard
+
+rm -Rf /system/app/
+
+rm -Rf /system/app/talkback
+
+# END OF CLEANING UP /SYSTEM/APP
+
+rm -Rf /system/priv-app/sCloud*
+rm -Rf /system/priv-app/StoryAlbum*
+rm -Rf /system/priv-app/SNoteProvider
+rm -Rf /system/priv-app/HealthService
+rm -Rf /system/priv-app/SHealth3_5
+rm -Rf /system/priv-app/SMemo2
+rm -Rf /system/priv-app/SFinder
+rm -Rf /system/priv-app/SamsungLink*
+rm -Rf /system/priv-app/SamsungMusic_20
+rm -Rf /system/priv-app/SamsungVideo
+rm -Rf /system/priv-app/SamsungBilling
+#rm -Rf /system/priv-app/
+
+# END OF SCRIPT
+echo "Unmount /system"
+umount /system
